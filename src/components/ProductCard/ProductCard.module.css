@@ -1,0 +1,85 @@
+.card {
+    width: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    user-select: none; /* Desactiva la selección de texto */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    pointer-events: none; /* Evita que se pueda hacer clic derecho en la imagen */
+    user-select: none; /* Evita la selección de la imagen */
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.info {
+    padding: 16px;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+}
+
+
+.name,
+.price {
+    user-select: none; /* Evita la selección de texto en el nombre y precio */
+}
+
+/* Ajusta el tamaño de la imagen */
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Ajusta el contenedor del swiper */
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Cambia el color y el tamaño de las flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333; /* Cambia este color al que prefieras */
+    font-size: 1.5em; /* Ajusta el tamaño si es necesario */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #333; /* Asegúrate de que el color se aplique también a las flechas internas */
+}
