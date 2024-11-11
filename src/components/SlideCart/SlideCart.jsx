@@ -1,14 +1,14 @@
+import useCart from '../../hooks/useCart';
 
 import { Link } from 'react-router-dom';
 import { CartItem } from '../CartItem/CartItem';
 import styles from './SlideCart.module.css';
-import useCart from '../../hooks/useCart';
 
 const SlideCart = ({ onClose }) => {
     const { cart, clearCart, calculateTotalItem } = useCart();
 
     const calculateCartTotal = () => {
-        return cart.reduce((total, product) => total + calculateTotalItem(product), 0);
+        return cart.reduce((total, product) => total + (product.precio_venta * product.quantity), 0);
     };
 
     return (
@@ -39,17 +39,13 @@ const SlideCart = ({ onClose }) => {
                         <CartItem
                             key={`${product._id}-${product.color}-${product.size}`}
                             image={product.fotos[0]}
-                            precio_venta={product.precio_venta} // Pasa `precio_venta` como precio
+                            precio_venta={product.precio_venta}
                             name={product.nombre}
                             quantity={product.quantity}
                             id={product._id}
                             stock={product.variantes.find(variant => variant.color === product.color && variant.talla === product.size)?.stock || 0}
                             color={product.color}
                             size={product.size}
-                            addToCart={() => addToCart(product, product.color, product.size, 1)}
-                            deleteProductCart={() => deleteProductCart(product)}
-                            calculateTotalItem={() => calculateTotalItem(product)}
-                            deleteProduct={() => deleteProduct(product)}
                         />
                     ))}
                 </ul>

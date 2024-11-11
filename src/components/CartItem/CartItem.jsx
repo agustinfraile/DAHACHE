@@ -1,23 +1,22 @@
+import useCart from '../../hooks/useCart';
 import styles from './CartItem.module.css';
 
 export const CartItem = ({
     image,
-    precio_venta, // Recibe `precio_venta` del contexto
+    precio_venta,
     name,
     quantity,
     id,
     stock,
     color,
     size,
-    addToCart,
-    deleteProductCart,
-    calculateTotalItem,
-    deleteProduct
 }) => {
-    const total = precio_venta * quantity; // Calcula el total usando `precio_venta`
+    const { addToCart, deleteProductCart, deleteProduct } = useCart();
+
+    const total = precio_venta * quantity;
 
     return (
-        <li key={id} className={styles.item}>
+        <li className={styles.item}>
             <img src={image} alt={name} className={styles.itemImg} />
 
             <div className={styles.itemName}>
@@ -31,18 +30,18 @@ export const CartItem = ({
             <div>
                 <small>Cantidad: {quantity}</small>
                 {quantity < stock ? (
-                    <button onClick={addToCart}>+</button>
+                    <button onClick={() => addToCart({ _id: id, color, size, precio_venta }, color, size, 1)}>+</button>
                 ) : (
                     <p>No se puede agregar más</p>
                 )}
-                <button onClick={deleteProductCart}>-</button>
+                <button onClick={() => deleteProductCart({ _id: id, color, size })}>-</button>
                 <div>
-                    <button onClick={deleteProduct}>X</button>
+                    <button onClick={() => deleteProduct({ _id: id, color, size })}>X</button>
                 </div>
             </div>
 
             <div>
-                <h4>Total: ${total}</h4>
+                <h4>Total: ${total.toLocaleString('es-AR')}</h4>
             </div>
         </li>
     );
