@@ -1,9 +1,13 @@
 import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
-const ProductList = ({products, loading, error}) => {
+
+
+
+const ProductList = ({ products, loading, error }) => {
     // Accede al estado de productos desde Redux
 
     // Mostrar mensaje de carga
@@ -15,15 +19,21 @@ const ProductList = ({products, loading, error}) => {
     return (
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             {products.map((product) => (
-                <ProductCard
-                    key={product.id_producto} 
-                    imageUrl={product.fotos} 
-                    name={product.nombre}
-                    price={product.precio_venta}
-                />
+                <Link
+                    to={`/product/${product.id_producto}`}
+                    key={product.id_producto}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                    <ProductCard
+                        key={product.id_producto}
+                        imageUrl={product.fotos}
+                        name={product.nombre}
+                        price={product.precio_venta}
+                    />
+                </Link>
             ))}
-        </div>
-    );
+                </div>
+            );
 };
 
-export default ProductList;
+            export default ProductList;
