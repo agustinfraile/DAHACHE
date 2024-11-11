@@ -1,14 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+/* ProductCard.module.css */
+
 .card {
-    width: 320px;
-    border-radius: 12px;
-    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    /* Ajusta el ancho máximo para un tamaño consistente */
+    margin: auto;
+    min-height: 600px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    user-select: none; /* Desactiva la selección de texto */
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -16,70 +33,70 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+
 .imageContainer {
     width: 100%;
     height: 400px;
-    overflow: hidden;
+    /* Establece una altura mayor para un formato más rectangular vertical */
+    position: relative;
 }
 
 .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Asegura que la imagen se ajuste sin deformarse */
+    border-radius: 8px 8px 0 0;
+
     transition: transform 0.3s ease;
     pointer-events: none; /* Evita que se pueda hacer clic derecho en la imagen */
     user-select: none; /* Evita la selección de la imagen */
 }
 
-.card:hover .image {
-    transform: scale(1.05);
+.swiper {
+    width: 100%;
+    height: 100%;
 }
 
 .info {
-    padding: 16px;
+    padding: 1rem;
 }
 
 .name {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.2rem;
     color: #333;
-    margin: 8px 0;
+    margin: 0.5rem 0;
 }
 
 .price {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #666;
+    font-size: 1rem;
+    color: #536C8D;
+    margin-bottom: 1rem;
 }
-
 
 .name,
 .price {
     user-select: none; /* Evita la selección de texto en el nombre y precio */
 }
 
-/* Ajusta el tamaño de la imagen */
-.image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* ProductCard.module.css */
+
+.addToCartButton {
+    background-color: #F97992;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease; /* Suaviza la transición */
 }
 
-/* Ajusta el contenedor del swiper */
-.imageContainer {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Cambia el color y el tamaño de las flechas de navegación */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #333; /* Cambia este color al que prefieras */
-    font-size: 1.5em; /* Ajusta el tamaño si es necesario */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    color: #333; /* Asegúrate de que el color se aplique también a las flechas internas */
+.addToCartButton:hover {
+    background-color: #e5687d; /* Color más oscuro para el hover */
 }
