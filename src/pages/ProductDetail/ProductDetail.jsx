@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import Cuotas from '../../components/Cuotas/Cuotas';
+import DescuentoContado from '../../components/DescuentoContado/DescuentoContado';
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -16,6 +18,9 @@ const ProductDetail = () => {
   if (!selectedProduct) {
     return <p>Producto no encontrado.</p>;
   }
+  // Calcular el valor de cada cuota
+  const cuotasSinInteres = selectedProduct.cuotas_sin_interes || 3;
+  const valorCuota = (selectedProduct.precio_venta / cuotasSinInteres).toFixed(2);
 
   return (
     <div className={styles.productDetailContainer}>
@@ -41,8 +46,20 @@ const ProductDetail = () => {
         {/* Detalles del producto */}
         <div className={styles.productInfo}>
           <h1 className={styles.productName}>{selectedProduct.nombre}</h1>
-          <p className={styles.productPrice}>${selectedProduct.precio_venta}</p>
+          {/* Precio con fondo azul */}
+          <div className={styles.productPriceContainer}>
+            ${selectedProduct.precio_venta.toLocaleString('es-AR')}
+          </div>
           <p className={styles.productDescription}>{selectedProduct.descripcion}</p>
+          {/* Cuotas sin interés y cálculo de cuota mensual */}
+          <Cuotas />
+          <p className={styles.cuotaMensual}>Cuota mensual: ${valorCuota}</p>
+
+          {/* Descuento por pago en efectivo */}
+          <DescuentoContado
+            precioVenta={selectedProduct.precio_venta}
+            precioContado={selectedProduct.precio_contado}
+          />
         </div>
       </div>
     </div>

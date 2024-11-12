@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import Cuotas from '../Cuotas/Cuotas';
 
-const ProductCard = ({ imageUrl = [], name, price }) => (
+const ProductCard = ({ imageUrl = [], name, price, cuotasSinInteres=3 }) => (
   <div className={styles.card}>
     <div className={styles.imageContainer}>
       <Swiper
@@ -29,6 +30,9 @@ const ProductCard = ({ imageUrl = [], name, price }) => (
     <div className={styles.info}>
       <h2 className={styles.name}>{name}</h2>
       <p className={styles.price}>{price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
+      {/* Cuotas sin interés */}
+      <Cuotas />
+      
     </div>
   </div>
 );
