@@ -5,6 +5,7 @@ import { getProducts } from '../../redux/actions';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { Link } from 'react-router-dom';
+import CollectionHeader from '../../components/CollectionHeader/CollectionHeader';
 
 const ManCollection = () => {
     const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const ManCollection = () => {
 
     return (
         <div className={styles.collectionContainer}>
-            <h2 className={styles.collectionTitle}>Colección Hombre</h2>
+            <CollectionHeader text="Colección Hombre" />
             {loading && <p>Cargando productos...</p>}
             {error && <p>Error al cargar los productos</p>}
             <InfiniteScroll
