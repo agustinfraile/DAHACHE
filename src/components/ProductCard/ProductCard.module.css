@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 /* ProductCard.module.css */
 
 .card {
@@ -68,7 +56,7 @@
 
 .name {
     font-size: 1.2rem;
-    color: #333;
+    color: #F97992;
     margin: 0.5rem 0;
 }
 
