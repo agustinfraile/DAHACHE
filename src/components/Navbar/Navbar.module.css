@@ -1,3 +1,4 @@
+/* Estilos generales para la navbar */
 .navbar {
   background-color: #000000;
   color: #FFFFFF;
@@ -5,6 +6,7 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
+  position: relative;
 }
 
 .logoLink {
@@ -17,6 +19,7 @@
   font-size: 1.5rem;
 }
 
+/* Links de navegación para pantallas grandes */
 .navLinks {
   display: flex;
   align-items: center;
@@ -32,5 +35,45 @@
 }
 
 .navLinks a:hover {
-  color: #D6C292; /* Cambia de color en hover */
+  color: #D6C292;
+}
+
+/* Icono de menú para dispositivos móviles */
+.menuIcon {
+  display: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+
+  /* Oculta los links de navegación en dispositivos móviles */
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  /* Mostrar los links de navegación cuando el menú está abierto */
+  .navLinks.showMenu {
+    display: flex;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .navLinks a {
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
 }
