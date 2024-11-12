@@ -7,6 +7,8 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../../components/Cuotas/Cuotas';
 import DescuentoContado from '../../components/DescuentoContado/DescuentoContado';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -44,7 +46,9 @@ const ProductDetail = () => {
           >
             {selectedProduct.fotos.map((foto, index) => (
               <SwiperSlide key={index}>
-                <img src={foto} alt={`Foto ${index + 1}`} className={styles.productImage} />
+                <Zoom>
+                  <img src={foto} alt={`Foto ${index + 1}`} className={styles.productImage} />
+                </Zoom>
               </SwiperSlide>
             ))}
           </Swiper>
