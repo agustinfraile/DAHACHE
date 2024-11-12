@@ -43,6 +43,21 @@
     margin-bottom: 0.5rem;
 }
 
+/* ProductDetail.module.css */
+
+.productPriceContainer {
+    background-color: #536C8D; /* Fondo azul */
+    color: #FFFFFF;            /* Letras blancas */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+
 .productPrice {
     font-size: 1.5rem;
     color: #536C8D;
@@ -54,6 +69,13 @@
     color: #333;
     margin-bottom: 1.5rem;
 }
+
+.cuotaMensual {
+    font-size: 1rem;
+    color: #536C8D;
+    margin-top: 0.5rem;
+}
+
 
 /* Media Queries */
 

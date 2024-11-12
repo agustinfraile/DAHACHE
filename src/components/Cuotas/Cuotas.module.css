@@ -1,0 +1,10 @@
+/* Cuotas.module.css */
+.cuotasContainer {
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
