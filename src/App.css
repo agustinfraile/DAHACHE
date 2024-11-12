@@ -3,3 +3,27 @@
   padding: 0;
   text-align: center;
 }
+
+/* Ajuste de margen superior en pantallas grandes */
+@media (min-width: 1024px) {
+  #root {
+    margin-top: 69.3px;
+    /* Ajuste para pantallas de escritorio */
+  }
+}
+
+/* Ajuste de margen superior en tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #root {
+    margin-top: 60px;
+    /* Ajuste para tablets */
+  }
+}
+
+/* Ajuste de margen superior en móviles */
+@media (max-width: 767px) {
+  #root {
+    margin-top: 55px;
+    /* Ajuste para móviles */
+  }
+}
