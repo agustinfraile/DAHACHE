@@ -6,7 +6,13 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Asegura que la navbar esté en el frente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logoLink {
@@ -48,8 +54,6 @@
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-
-  /* Oculta los links de navegación en dispositivos móviles */
   .navLinks {
     display: none;
     flex-direction: column;
@@ -76,4 +80,10 @@
     padding: 0.5rem 0;
     width: 100%;
   }
+}
+
+/* Agregar margen superior al contenido principal para evitar que quede detrás de la navbar */
+.mainContent {
+  margin-top: 70px;
+  /* Ajusta este valor según la altura de la navbar */
 }
