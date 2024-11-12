@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { Link } from "react-router-dom";
+import CollectionHeader from "../../components/CollectionHeader/CollectionHeader";
 
 const WomenCollection = () => {
     const dispatch = useDispatch();
@@ -36,7 +37,8 @@ const WomenCollection = () => {
 
     return (
         <section className={styles.collectionContainer}>
-            <h2 className={styles.collectionTitle}>Colección Mujer</h2>
+
+            <CollectionHeader text="Colección Mujer" />
             {loading && <p>Cargando productos...</p>}
             {error && <p>Error al cargar los productos</p>}
             <InfiniteScroll
