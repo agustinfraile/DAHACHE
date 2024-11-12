@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../Cuotas/Cuotas';
 
-const ProductCard = ({ imageUrl = [], name, price, cuotasSinInteres=3 }) => (
+const ProductCard = ({ imageUrl = [], name, price }) => (
   <div className={styles.card}>
     <div className={styles.imageContainer}>
       <Swiper
