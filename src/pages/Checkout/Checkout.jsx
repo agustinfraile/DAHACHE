@@ -1,14 +1,20 @@
+// Checkout.jsx
 import styles from './Checkout.module.css';
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import useCart from '../../hooks/useCart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { postEmail } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
 const Checkout = () => {
-    const { cart } = useCart();
+    const { cart, clearCart } = useCart();
     const [isApartment, setIsApartment] = useState(false);
-    const [paymentMethod, setPaymentMethod] = useState(''); // Estado para el método de pago
+    const [paymentMethod, setPaymentMethod] = useState('');
+    const navigate = useNavigate();
+
+    const dispatch = useDispatch();
 
     const subtotal = cart.reduce((total, item) =>
         paymentMethod === 'Efectivo' || paymentMethod === 'Transferencia'
@@ -16,14 +22,14 @@ const Checkout = () => {
             : total + item.precio_venta * item.quantity,
         0
     );
-
-    const total = subtotal; // No se incluye el costo de envío
+    const total = subtotal;
 
     const initialValues = {
         metodoPago: '',
         nombre: '',
         apellido: '',
         celular: '',
+        email: '', // Agregamos email al formulario
         provincia: '',
         localidad: '',
         direccionPostal: '',
@@ -46,6 +52,7 @@ const Checkout = () => {
         celular: Yup.string()
             .matches(/^[0-9]+$/, 'Solo se permiten números')
             .required('Requerido'),
+        email: Yup.string().email('Ingrese un correo válido').required('Requerido'),
         provincia: Yup.string()
             .matches(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/, 'Solo se permiten letras y acentos')
             .required('Requerido'),
@@ -74,9 +81,29 @@ const Checkout = () => {
         observaciones: Yup.string().matches(/^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]*$/, 'Solo se permiten letras, acentos y números'),
     });
 
-    const handleSubmit = (values) => {
-        console.log('Orden realizada:', values);
-        alert('Orden realizada!');
+    const handleSubmit = async (values) => {
+        const pedido = cart.map(item => ({
+            nombre: item.nombre,
+            quantity: item.quantity,
+            precio_venta: item.precio_venta
+        }));
+
+        const payload = {
+            email: values.email,
+            nombre: values.nombre,
+            apellido: values.apellido,
+            pedido
+        };
+
+        try {
+            await dispatch(postEmail(payload));
+            alert('¡Pedido realizado! Serás redirigido a la página de inicio.');
+            clearCart();
+            navigate('/');
+        } catch (error) {
+            console.error('Error al enviar el correo:', error);
+            alert('Hubo un problema al realizar el pedido. Inténtalo nuevamente.');
+        }
     };
 
     return (
@@ -95,6 +122,7 @@ const Checkout = () => {
                 >
                     {({ values, setFieldValue }) => (
                         <Form className={styles.checkoutForm}>
+                            {/* Campo para seleccionar el método de pago */}
                             <div className={styles.formGroup}>
                                 <label>Método de Pago</label>
                                 <Field
@@ -115,6 +143,8 @@ const Checkout = () => {
                                 <ErrorMessage name="metodoPago" component="div" className={styles.error} />
                             </div>
 
+
+
                             <div className={styles.formGroup}>
                                 <label>Nombre</label>
                                 <Field type="text" name="nombre" />
@@ -125,6 +155,12 @@ const Checkout = () => {
                                 <label>Apellido</label>
                                 <Field type="text" name="apellido" />
                                 <ErrorMessage name="apellido" component="div" className={styles.error} />
+                            </div>
+
+                            <div className={styles.formGroup}>
+                                <label>Email</label>
+                                <Field type="email" name="email" />
+                                <ErrorMessage name="email" component="div" className={styles.error} />
                             </div>
 
                             <div className={styles.formGroup}>
@@ -146,13 +182,13 @@ const Checkout = () => {
                             </div>
 
                             <div className={styles.formGroup}>
-                                <label>Código Postal</label>
+                                <label>Dirección Postal</label>
                                 <Field type="text" name="direccionPostal" />
                                 <ErrorMessage name="direccionPostal" component="div" className={styles.error} />
                             </div>
 
                             <div className={styles.formGroup}>
-                                <label>Calle</label>
+                                <label>Dirección</label>
                                 <Field type="text" name="direccion" />
                                 <ErrorMessage name="direccion" component="div" className={styles.error} />
                             </div>
@@ -196,7 +232,7 @@ const Checkout = () => {
                             </div>
 
                             <button type="submit" className={styles.placeOrderButton}>
-                                Realizar pedido vía WhatsApp
+                                Realizar pedido
                             </button>
                         </Form>
                     )}

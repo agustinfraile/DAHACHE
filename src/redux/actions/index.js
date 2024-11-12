@@ -26,3 +26,10 @@ export const getProductById = (id) => async (dispatch) => {
         console.error(`Error al obtener el producto con id ${id}:`, error);
     }
 };
+
+export const postEmail = (payload) => {
+  return async function () {
+    const data = await axios.post("http://localhost:3001/mails", payload);
+    return data;
+  }
+}
