@@ -18,9 +18,16 @@ const ProductDetail = () => {
   if (!selectedProduct) {
     return <p>Producto no encontrado.</p>;
   }
+
   // Calcular el valor de cada cuota
   const cuotasSinInteres = selectedProduct.cuotas_sin_interes || 3;
-  const valorCuota = (selectedProduct.precio_venta / cuotasSinInteres).toFixed(2);
+  const valorCuota = (selectedProduct.precio_venta / cuotasSinInteres).toLocaleString('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+  });
+
+  // Precio formateado sin decimales para el fondo azul
+  const precioSinDecimales = Math.floor(selectedProduct.precio_venta).toLocaleString('es-AR');
 
   return (
     <div className={styles.productDetailContainer}>
@@ -46,14 +53,14 @@ const ProductDetail = () => {
         {/* Detalles del producto */}
         <div className={styles.productInfo}>
           <h1 className={styles.productName}>{selectedProduct.nombre}</h1>
-          {/* Precio con fondo azul */}
+          {/* Precio con fondo azul, sin decimales */}
           <div className={styles.productPriceContainer}>
-            ${selectedProduct.precio_venta.toLocaleString('es-AR')}
+            ${precioSinDecimales}
           </div>
           <p className={styles.productDescription}>{selectedProduct.descripcion}</p>
           {/* Cuotas sin interés y cálculo de cuota mensual */}
           <Cuotas />
-          <p className={styles.cuotaMensual}>Cuota mensual: ${valorCuota}</p>
+          <p className={styles.cuotaMensual}>Cuota mensual: {valorCuota}</p>
 
           {/* Descuento por pago en efectivo */}
           <DescuentoContado
