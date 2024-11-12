@@ -1,0 +1,236 @@
+[
+    {
+        "_id": "PMR00001",
+        "id_producto": "PMR00001",
+        "nombre": "Remera Negra Transparente",
+        "genero": "Mujer",
+        "categoria": "Remera",
+        "precio_venta": 10000,
+        "precio_contado": 8000,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Remera transparente",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212099/products/rknxlb3ilojnofe9rkel.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Negro",
+                "stock": 3,
+                "_id": {
+                    "$oid": "673033445e4a8099bd25767a"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PMM00001",
+        "id_producto": "PMM00001",
+        "nombre": "Musculosa Corte",
+        "genero": "Mujer",
+        "categoria": "Musculosa",
+        "precio_venta": 11255,
+        "precio_contado": 9000,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Musculosa Corte",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212425/products/t7pga1gzmgqorddw7bvw.jpg",
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212427/products/zncjwws7m4sejftalant.jpg",
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212427/products/fos6cg8xgaai35zltsn0.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Negro",
+                "stock": 2,
+                "_id": {
+                    "$oid": "6730348c5e4a8099bd257681"
+                }
+            },
+            {
+                "talla": "T1",
+                "color": "Blanco",
+                "stock": 2,
+                "_id": {
+                    "$oid": "6730348c5e4a8099bd257682"
+                }
+            },
+            {
+                "talla": "T1",
+                "color": "Celeste",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730348c5e4a8099bd257683"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PSR00001",
+        "id_producto": "PSR00001",
+        "nombre": "Remera Dibujitos",
+        "genero": "Sin género",
+        "categoria": "Remera",
+        "precio_venta": 16000,
+        "precio_contado": 12700,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Remera con dibujitos",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212603/products/kf3fvkcf0sxdtgw90lku.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "S",
+                "color": "Blanco",
+                "stock": 2,
+                "_id": {
+                    "$oid": "6730353c5e4a8099bd25768b"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PMB00001",
+        "id_producto": "PMB00001",
+        "nombre": "Blusa Cuello V",
+        "genero": "Mujer",
+        "categoria": "Blusa",
+        "precio_venta": 29150,
+        "precio_contado": 23298,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Blusa Cuello V",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213022/products/a0uzcywkonjxwmq9qsbb.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Blanco",
+                "stock": 1,
+                "_id": {
+                    "$oid": "673036df5e4a8099bd257694"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PMR00002",
+        "id_producto": "PMR00002",
+        "nombre": "Remera Basica",
+        "genero": "Mujer",
+        "categoria": "Remera",
+        "precio_venta": 10000,
+        "precio_contado": 7900,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Remera Basica ",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213144/products/tthihb7yccli0geqsf2v.jpg",
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213146/products/eujfbaffqt0vjxonwxur.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Negro",
+                "stock": 2,
+                "_id": {
+                    "$oid": "6730375a5e4a8099bd2576a0"
+                }
+            },
+            {
+                "talla": "T1",
+                "color": "Blanco",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730375a5e4a8099bd2576a1"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PMB00002",
+        "id_producto": "PMB00002",
+        "nombre": "Blusa Rayitas Finas",
+        "genero": "Mujer",
+        "categoria": "Blusa",
+        "precio_venta": 28200,
+        "precio_contado": 22500,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Blusa Rayitas Finas",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213383/products/g47wwidgz4ei0nufmjnd.jpg",
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213385/products/xo3schywhi0wyynsvdpl.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Celeste",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730384a5e4a8099bd2576b8"
+                }
+            },
+            {
+                "talla": "T1",
+                "color": "Rosa",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730384a5e4a8099bd2576b9"
+                }
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "PMC00001",
+        "id_producto": "PMC00001",
+        "nombre": "Camisa Vuelitos",
+        "genero": "Mujer",
+        "categoria": "Camisa",
+        "precio_venta": 39100,
+        "precio_contado": 31199,
+        "tiene_descuento": false,
+        "valor_descuento": 0,
+        "activo": true,
+        "descripcion": "Camisa Vuelitos",
+        "fotos": [
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213722/products/hoy8hrjguiklsx1h86mw.jpg",
+            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213723/products/r0t15bq97r4ku4lmldwp.jpg"
+        ],
+        "variantes": [
+            {
+                "talla": "T1",
+                "color": "Blanco",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730399c5e4a8099bd2576c7"
+                }
+            },
+            {
+                "talla": "T1",
+                "color": "Negro",
+                "stock": 1,
+                "_id": {
+                    "$oid": "6730399c5e4a8099bd2576c8"
+                }
+            }
+        ],
+        "__v": 0
+    }
+]

@@ -1,32 +1,21 @@
-import { GET_PRODUCTS, GET_PRODUCT_BY_ID } from "../actions";
-
-// Estado inicial del reducer
+// reducer.js
 const initialState = {
-    products: [], // Lista de productos
-    selectedProduct: null, // Producto específico seleccionado
+    products: [],
     loading: false,
     error: null,
 };
 
-// Reducer de productos
-const productsReducer = (state = initialState, action) => {
-    console.log("Reducer action received:", action); // Verificación
+function productReducer(state = initialState, action) {
     switch (action.type) {
-        case GET_PRODUCTS:
-            return {
-                ...state,
-                loading: false,
-                products: action.payload,
-            };
-        case GET_PRODUCT_BY_ID:
-            return {
-                ...state,
-                loading: false,
-                selectedProduct: action.payload, // Guarda el producto específico
-            };
+        case 'GET_PRODUCTS_SUCCESS':
+            return { ...state, products: action.payload, loading: false };
+        case 'GET_PRODUCTS_FAILURE':
+            return { ...state, error: action.payload, loading: false };
+        case 'GET_PRODUCTS_REQUEST':
+            return { ...state, loading: true };
         default:
             return state;
     }
-};
+}
 
-export default productsReducer;
+export default productReducer;
