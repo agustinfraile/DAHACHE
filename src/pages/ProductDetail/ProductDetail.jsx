@@ -1,3 +1,4 @@
+import styles from './ProductDetail.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { getProductById } from '../../redux/actions';
@@ -6,20 +7,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import styles from './ProductDetail.module.css';
 import useCart from '../../hooks/useCart';
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const dispatch = useDispatch();
   const selectedProduct = useSelector((state) => state.selectedProduct);
-  const { addToCart } = useCart();
+  const { addToCart, cart } = useCart();
 
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState(null);
   const [availableSizes, setAvailableSizes] = useState([]);
   const [selectedSize, setSelectedSize] = useState(null);
   const [stock, setStock] = useState(null);
+  const [isAddToCartDisabled, setIsAddToCartDisabled] = useState(false);
 
   const handleQuantityChange = (amount) => {
     setQuantity(prevQuantity => Math.max(1, Math.min(prevQuantity + amount, stock || 1)));
@@ -41,6 +42,32 @@ const ProductDetail = () => {
     setQuantity(1);
   };
 
+  useEffect(() => {
+    if (productId) {
+      dispatch(getProductById(productId));
+    }
+  }, [dispatch, productId]);
+
+  // Verificar si el botón de añadir al carrito debe estar deshabilitado
+  useEffect(() => {
+    if (selectedProduct && selectedColor && selectedSize) {
+      const variant = selectedProduct.variantes.find(
+        (v) => v.color === selectedColor && v.talla === selectedSize
+      );
+
+      const stockDisponible = variant ? variant.stock : 0;
+      const existingProductInCart = cart.find(
+        (item) =>
+          item._id === selectedProduct._id &&
+          item.color === selectedColor &&
+          item.size === selectedSize
+      );
+
+      const cantidadEnCarrito = existingProductInCart ? existingProductInCart.quantity : 0;
+      setIsAddToCartDisabled(cantidadEnCarrito >= stockDisponible);
+    }
+  }, [selectedProduct, selectedColor, selectedSize, cart]);
+
   const handleAddToCart = () => {
     if (selectedColor && selectedSize && quantity <= stock) {
       addToCart(selectedProduct, selectedColor, selectedSize, quantity);
@@ -48,12 +75,6 @@ const ProductDetail = () => {
       alert("Por favor, selecciona el color, la talla y asegúrate de que la cantidad no exceda el stock.");
     }
   };
-
-  useEffect(() => {
-    if (productId) {
-      dispatch(getProductById(productId));
-    }
-  }, [dispatch, productId]);
 
   return (
     <div className={styles.productDetailContainer}>
@@ -135,7 +156,13 @@ const ProductDetail = () => {
             </div>
 
             {/* Botón "Añadir al carrito" */}
-            <button className={styles.addToCartButton} onClick={handleAddToCart}>Añadir al carrito</button>
+            <button
+              className={`${styles.addToCartButton} ${isAddToCartDisabled ? styles.disabled : ''}`}
+              onClick={handleAddToCart}
+              disabled={isAddToCartDisabled}
+            >
+              Añadir al carrito
+            </button>
           </div>
         </div>
       ) : (

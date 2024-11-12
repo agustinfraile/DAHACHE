@@ -7,17 +7,7 @@ import useCart from '../../hooks/useCart';
 import SlideCart from '../SlideCart/SlideCart';
 
 const Navbar = () => {
-    const { cart, addToCart } = useCart();
-    const [showSlider, setShowSlider] = useState(false);
-
-    const toggleSlider = () => {
-        setShowSlider(!showSlider);
-    };
-
-    const handleAddToCart = (product) => {
-        addToCart(product);
-        setShowSlider(true); // Abrir el SlideCart automáticamente
-    };
+    const { cart, isModalOpen, toggleModal } = useCart();
 
     return (
         <header className={styles.navbar}>
@@ -29,20 +19,14 @@ const Navbar = () => {
                 <Link to="/coleccionmujer">Colección Mujer</Link>
 
                 <div className={styles.navbar_container_menuOptions__cart}>
-                    <div
-                        className={styles.cartContainer}
-                        onClick={toggleSlider}
-                    >
-                        {cart.length > 0 ? <p>🚀</p> : <p>🛒</p>}
+                    <div className={styles.cartContainer} onClick={toggleModal}>
+                        {cart.length > 0 ? <p>🛒 {cart.length}</p> : <p>🛒</p>}
                     </div>
-                    {showSlider && (
-                        <div
-                            className={styles.sliderOverlay}
-                            onClick={toggleSlider}
-                        />
-                    )}
-                    {showSlider && (
-                        <SlideCart onClose={toggleSlider} />
+                    {isModalOpen && (
+                        <>
+                            <div className={styles.sliderOverlay} onClick={toggleModal} />
+                            <SlideCart onClose={toggleModal} />
+                        </>
                     )}
                 </div>
             </nav>

@@ -1,0 +1,146 @@
+.checkoutContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.formContainer {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.orderSummary {
+    flex: 0.4;
+    padding: 1.5rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+.error {
+    color: #f00;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.placeOrderButton {
+    background-color: #f97992;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.placeOrderButton:hover {
+    background-color: #e36882;
+}
+
+.orderSummary h2 {
+    margin-bottom: 1rem;
+}
+
+.orderItems {
+    margin-bottom: 1rem;
+}
+
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summaryDetails {
+    margin-top: 1rem;
+}
+
+.summaryRow,
+.summaryRowTotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summaryRowTotal strong {
+    font-size: 1.2rem;
+}
+
+.backToShopping {
+    margin-bottom: 1rem;
+}
+.continueShoppingButton {
+    background-color: #536C8D;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.continueShoppingButton:hover {
+    background-color: #40597b;
+}
+
+.formContainer {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.orderSummary {
+    flex: 0.4;
+    padding: 1.5rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+}
+
+.discountedPrice {
+    color: #f97992;
+    font-weight: bold;
+}

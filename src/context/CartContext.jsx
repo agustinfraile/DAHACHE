@@ -18,19 +18,36 @@ export function CartProvider({ children }) {
     const toggleModal = () => setIsModalOpen(!isModalOpen);
 
     const addToCart = (product, color, size, quantity) => {
-        setCart((prevCart) => {
-            const existingProduct = prevCart.find(
-                (item) =>
-                    item._id === product._id &&
-                    item.color === color &&
-                    item.size === size
-            );
+        // Encontrar el stock disponible para esta variante específica (color y talla)
+        const variant = product.variantes.find(
+            (variant) => variant.color === color && variant.talla === size
+        );
 
-            if (existingProduct) {
+        if (!variant) {
+            console.warn('Variante no encontrada');
+            return;
+        }
+
+        const stockDisponible = variant.stock;
+
+        // Calcular la cantidad total en el carrito para esta variante
+        const existingProductInCart = cart.find(
+            (item) => item._id === product._id && item.color === color && item.size === size
+        );
+
+        const cantidadEnCarrito = existingProductInCart ? existingProductInCart.quantity : 0;
+
+        // Verificar si la cantidad total deseada supera el stock
+        if (cantidadEnCarrito + quantity > stockDisponible) {
+            alert(`Ya has agregado el máximo de ${stockDisponible} unidades para esta variante.`);
+            return;
+        }
+
+        // Proceder a agregar al carrito
+        setCart((prevCart) => {
+            if (existingProductInCart) {
                 return prevCart.map((item) =>
-                    item._id === product._id &&
-                        item.color === color &&
-                        item.size === size
+                    item._id === product._id && item.color === color && item.size === size
                         ? { ...item, quantity: item.quantity + quantity }
                         : item
                 );
@@ -47,7 +64,7 @@ export function CartProvider({ children }) {
             }
         });
 
-        setIsModalOpen(true);
+        setIsModalOpen(true); // Abrir el SlideCart automáticamente
     };
 
     const deleteProductCart = (product) => {
@@ -60,16 +77,14 @@ export function CartProvider({ children }) {
             );
 
             if (existingProduct && existingProduct.quantity > 1) {
-                // Si la cantidad es mayor a 1, reduce en 1
                 return prevCart.map((item) =>
                     item._id === product._id &&
-                        item.color === product.color &&
-                        item.size === product.size
+                    item.color === product.color &&
+                    item.size === product.size
                         ? { ...item, quantity: item.quantity - 1 }
                         : item
                 );
             } else {
-                // Si la cantidad es 1, elimina el producto del carrito
                 return prevCart.filter(
                     (item) =>
                         !(

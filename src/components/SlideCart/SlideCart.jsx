@@ -18,7 +18,7 @@ const SlideCart = ({ onClose }) => {
             </div>
             <div className={styles.sliderContainer_title}>
                 <p className={styles.titleNavCart}>
-                    <Link to='/cart' onClick={onClose}>Ir a pagar</Link>
+                    <Link to='/checkout' onClick={onClose}>Ir a pagar</Link>
                 </p>
             </div>
 
