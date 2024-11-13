@@ -15,27 +15,23 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const products = useSelector((state) => state.products);
 
-  // Buscar el producto con el `productId` en el array de productos
   const selectedProduct = products.find((product) => product.id_producto === productId);
 
   if (!selectedProduct) {
     return <p>Producto no encontrado.</p>;
   }
 
-  // Calcular el valor de cada cuota
   const cuotasSinInteres = selectedProduct.cuotas_sin_interes || 3;
   const valorCuota = (selectedProduct.precio_venta / cuotasSinInteres).toLocaleString('es-AR', {
     style: 'currency',
     currency: 'ARS',
   });
 
-  // Precio formateado sin decimales para el fondo azul
   const precioSinDecimales = Math.floor(selectedProduct.precio_venta).toLocaleString('es-AR');
 
   return (
     <div className={styles.productDetailContainer}>
       <div className={styles.productDetail}>
-        {/* Carrusel de imágenes */}
         <div className={styles.imageCarousel}>
           <Swiper
             modules={[Navigation]}
@@ -55,30 +51,26 @@ const ProductDetail = () => {
           </Swiper>
         </div>
 
-        {/* Detalles del producto */}
         <div className={styles.productInfo}>
           <h1 className={styles.productName}>{selectedProduct.nombre}</h1>
-          {/* Precio con fondo azul, sin decimales */}
-          <div className={styles.productPriceContainer}>
-            ${precioSinDecimales}
-          </div>
+          <div className={styles.productPriceContainer}>${precioSinDecimales}</div>
           <p className={styles.productDescription}>{selectedProduct.descripcion}</p>
-          {/* Cuotas sin interés y cálculo de cuota mensual */}
+
           <Cuotas />
           <p className={styles.cuotaMensual}>Cuota mensual: {valorCuota}</p>
 
-          {/* Descuento por pago en efectivo */}
           <DescuentoContado
             precioVenta={selectedProduct.precio_venta}
             precioContado={selectedProduct.precio_contado}
           />
 
-          {/* Botón de WhatsApp */}
-          <WhatsAppButton nombre={selectedProduct.nombre} precio={selectedProduct.precio_venta} />
+          <div className={styles.buttonContainer}>
+            <WhatsAppButton nombre={selectedProduct.nombre} precio={selectedProduct.precio_venta} />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProductDetail;
+export default ProductDetail; 
