@@ -9,6 +9,7 @@ import Cuotas from '../../components/Cuotas/Cuotas';
 import DescuentoContado from '../../components/DescuentoContado/DescuentoContado';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import WhatsAppButton from '../../components/WhatsAppButton/WhatsAppButton';
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -71,6 +72,9 @@ const ProductDetail = () => {
             precioVenta={selectedProduct.precio_venta}
             precioContado={selectedProduct.precio_contado}
           />
+
+          {/* Botón de WhatsApp */}
+          <WhatsAppButton nombre={selectedProduct.nombre} precio={selectedProduct.precio_venta} />
         </div>
       </div>
     </div>
