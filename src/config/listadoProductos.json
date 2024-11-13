@@ -1,236 +1,1288 @@
-[
+[{
+  "_id": "PMR00001",
+  "id_producto": "PMR00001",
+  "nombre": "Náutica",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 16000,
+  "precio_contado": 12700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca con estampa azul.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731498530/products/qrxlo3sdzhz3jgmimbmt.jpg"
+  ],
+  "variantes": [
     {
-        "_id": "PMR00001",
-        "id_producto": "PMR00001",
-        "nombre": "Remera Negra Transparente",
-        "genero": "Mujer",
-        "categoria": "Remera",
-        "precio_venta": 10000,
-        "precio_contado": 8000,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Remera transparente",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212099/products/rknxlb3ilojnofe9rkel.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Negro",
-                "stock": 3,
-                "_id": {
-                    "$oid": "673033445e4a8099bd25767a"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PMM00001",
-        "id_producto": "PMM00001",
-        "nombre": "Musculosa Corte",
-        "genero": "Mujer",
-        "categoria": "Musculosa",
-        "precio_venta": 11255,
-        "precio_contado": 9000,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Musculosa Corte",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212425/products/t7pga1gzmgqorddw7bvw.jpg",
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212427/products/zncjwws7m4sejftalant.jpg",
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212427/products/fos6cg8xgaai35zltsn0.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Negro",
-                "stock": 2,
-                "_id": {
-                    "$oid": "6730348c5e4a8099bd257681"
-                }
-            },
-            {
-                "talla": "T1",
-                "color": "Blanco",
-                "stock": 2,
-                "_id": {
-                    "$oid": "6730348c5e4a8099bd257682"
-                }
-            },
-            {
-                "talla": "T1",
-                "color": "Celeste",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730348c5e4a8099bd257683"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PSR00001",
-        "id_producto": "PSR00001",
-        "nombre": "Remera Dibujitos",
-        "genero": "Sin género",
-        "categoria": "Remera",
-        "precio_venta": 16000,
-        "precio_contado": 12700,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Remera con dibujitos",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731212603/products/kf3fvkcf0sxdtgw90lku.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "S",
-                "color": "Blanco",
-                "stock": 2,
-                "_id": {
-                    "$oid": "6730353c5e4a8099bd25768b"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PMB00001",
-        "id_producto": "PMB00001",
-        "nombre": "Blusa Cuello V",
-        "genero": "Mujer",
-        "categoria": "Blusa",
-        "precio_venta": 29150,
-        "precio_contado": 23298,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Blusa Cuello V",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213022/products/a0uzcywkonjxwmq9qsbb.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Blanco",
-                "stock": 1,
-                "_id": {
-                    "$oid": "673036df5e4a8099bd257694"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PMR00002",
-        "id_producto": "PMR00002",
-        "nombre": "Remera Basica",
-        "genero": "Mujer",
-        "categoria": "Remera",
-        "precio_venta": 10000,
-        "precio_contado": 7900,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Remera Basica ",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213144/products/tthihb7yccli0geqsf2v.jpg",
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213146/products/eujfbaffqt0vjxonwxur.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Negro",
-                "stock": 2,
-                "_id": {
-                    "$oid": "6730375a5e4a8099bd2576a0"
-                }
-            },
-            {
-                "talla": "T1",
-                "color": "Blanco",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730375a5e4a8099bd2576a1"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PMB00002",
-        "id_producto": "PMB00002",
-        "nombre": "Blusa Rayitas Finas",
-        "genero": "Mujer",
-        "categoria": "Blusa",
-        "precio_venta": 28200,
-        "precio_contado": 22500,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Blusa Rayitas Finas",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213383/products/g47wwidgz4ei0nufmjnd.jpg",
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213385/products/xo3schywhi0wyynsvdpl.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Celeste",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730384a5e4a8099bd2576b8"
-                }
-            },
-            {
-                "talla": "T1",
-                "color": "Rosa",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730384a5e4a8099bd2576b9"
-                }
-            }
-        ],
-        "__v": 0
-    },
-    {
-        "_id": "PMC00001",
-        "id_producto": "PMC00001",
-        "nombre": "Camisa Vuelitos",
-        "genero": "Mujer",
-        "categoria": "Camisa",
-        "precio_venta": 39100,
-        "precio_contado": 31199,
-        "tiene_descuento": false,
-        "valor_descuento": 0,
-        "activo": true,
-        "descripcion": "Camisa Vuelitos",
-        "fotos": [
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213722/products/hoy8hrjguiklsx1h86mw.jpg",
-            "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731213723/products/r0t15bq97r4ku4lmldwp.jpg"
-        ],
-        "variantes": [
-            {
-                "talla": "T1",
-                "color": "Blanco",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730399c5e4a8099bd2576c7"
-                }
-            },
-            {
-                "talla": "T1",
-                "color": "Negro",
-                "stock": 1,
-                "_id": {
-                    "$oid": "6730399c5e4a8099bd2576c8"
-                }
-            }
-        ],
-        "__v": 0
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 2,
+      "_id": {
+        "$oid": "67349223a40d45f3b4eb0ee2"
+      }
     }
-]
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMB00001",
+  "id_producto": "PMB00001",
+  "nombre": "Aura",
+  "genero": "Mujer",
+  "categoria": "Blusa",
+  "precio_venta": 26300,
+  "precio_contado": 21000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Blusa celeste de rayas y mangas princesa. ",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731498716/products/khsdqps8vfgn9t5g94mm.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "673492dda40d45f3b4eb0ee5"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "673492dda40d45f3b4eb0ee6"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMC00001",
+  "id_producto": "PMC00001",
+  "nombre": "Nomad",
+  "genero": "Mujer",
+  "categoria": "Chaleco",
+  "precio_venta": 45100,
+  "precio_contado": 36000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Chaleco en tono arena, con bolsillos.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731499035/products/lgo6rs1vsrmapgjqragn.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734941da40d45f3b4eb0eed"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMB00002",
+  "id_producto": "PMB00002",
+  "nombre": "Brisa",
+  "genero": "Mujer",
+  "categoria": "Blusa",
+  "precio_venta": 17700,
+  "precio_contado": 14100,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Blusa con detalle de lazo.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731499275/products/si9nwlouo7dzfd9ibnac.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731499277/products/hkpgrk4jnfa229ncjce5.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734950ea40d45f3b4eb0ef3"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734950ea40d45f3b4eb0ef4"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMB00003",
+  "id_producto": "PMB00003",
+  "nombre": "Serena",
+  "genero": "Mujer",
+  "categoria": "Blusa",
+  "precio_venta": 28200,
+  "precio_contado": 22500,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Blusa de rayas.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731501714/products/ktjnkoukqkkygx50iz28.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731501715/products/xxugsnjwobtc5nojdffu.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Celeste",
+      "stock": 28199,
+      "_id": {
+        "$oid": "67349e95591fe9333bb75e01"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Rosa",
+      "stock": 3,
+      "_id": {
+        "$oid": "67349e95591fe9333bb75e02"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMM00001",
+  "id_producto": "PMM00001",
+  "nombre": "Duna",
+  "genero": "Mujer",
+  "categoria": "Musculosa",
+  "precio_venta": 18300,
+  "precio_contado": 14500,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Musculosa con rayas finas en tono neutro.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731501940/products/jtkid741ozetddiwwi3m.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "67349f76591fe9333bb75e05"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMR00002",
+  "id_producto": "PMR00002",
+  "nombre": "Marinero",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 28000,
+  "precio_contado": 22300,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera de rayas.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502160/products/vbsm4zyyeoaaa7ngupfh.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502162/products/z9kc0ne4cecfm0ozh6zx.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a053591fe9333bb75e0a"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a053591fe9333bb75e0b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMM00002",
+  "id_producto": "PMM00002",
+  "nombre": "Minimal",
+  "genero": "Mujer",
+  "categoria": "Musculosa",
+  "precio_venta": 24050,
+  "precio_contado": 19200,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Musculosa con rayas finas.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502392/products/iocgivfr1n07wnklo34g.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502393/products/zjrqlipms9ayd5old4yn.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a13b591fe9333bb75e10"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a13b591fe9333bb75e11"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMM00003",
+  "id_producto": "PMM00003",
+  "nombre": "Alba",
+  "genero": "Mujer",
+  "categoria": "Musculosa",
+  "precio_venta": 11255,
+  "precio_contado": 9000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Musculosa clásica.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502888/products/btprhdxoxouylds7jax0.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502890/products/jnrezncndplvbv8xybvh.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731502890/products/vlxgnaddtxeozrbgerx7.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a32b591fe9333bb75e19"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a32b591fe9333bb75e1a"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Azul",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a32b591fe9333bb75e1b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMR00003",
+  "id_producto": "PMR00003",
+  "nombre": "Ondina",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 14700,
+  "precio_contado": 11700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Camiseta de manga corta con escote en V y delicados detalles ondulados.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503232/products/ttrfkpefxs52whyfbtwt.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503234/products/e88tuxsjrdjo1inoinci.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503237/products/hj9fiuaxneibd3b27qfd.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Rosa",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a487591fe9333bb75e23"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a487591fe9333bb75e24"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a487591fe9333bb75e25"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMB00004",
+  "id_producto": "PMB00004",
+  "nombre": "Alondra",
+  "genero": "Mujer",
+  "categoria": "Blusa",
+  "precio_venta": 29150,
+  "precio_contado": 23300,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Blusa a rayas.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503839/products/goauvkkppuukqap1rzwe.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a6e1591fe9333bb75e31"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMC00002",
+  "id_producto": "PMC00002",
+  "nombre": "Cisne",
+  "genero": "Mujer",
+  "categoria": "Camisa",
+  "precio_venta": 39100,
+  "precio_contado": 31200,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Camisa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504056/products/fg8ovdonuammilkow5aw.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504058/products/o97detbnts9hizl23xpq.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a7bc591fe9333bb75e36"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a7bc591fe9333bb75e37"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMB00005",
+  "id_producto": "PMB00005",
+  "nombre": "Azabache",
+  "genero": "Mujer",
+  "categoria": "Blusa",
+  "precio_venta": 26000,
+  "precio_contado": 20700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": " Blusa negra con detalles.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504334/products/xbcqrhwuraopoufyrrwc.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a8d0591fe9333bb75e45"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734a8d0591fe9333bb75e46"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMM00004",
+  "id_producto": "PMM00004",
+  "nombre": "Terracota",
+  "genero": "Mujer",
+  "categoria": "Musculosa",
+  "precio_venta": 11260,
+  "precio_contado": 9000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Musculosa en tono cálido y neutro.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504573/products/anpzrhedhu3brimqaq0c.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Marron",
+      "stock": 2,
+      "_id": {
+        "$oid": "6734a9bf591fe9333bb75e52"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMR00004",
+  "id_producto": "PMR00004",
+  "nombre": "Niebla",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 10000,
+  "precio_contado": 8000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera transparente negra.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504701/products/lzwhvenbepl4riyeg1cb.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 3,
+      "_id": {
+        "$oid": "6734aa3f591fe9333bb75e5e"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMR00005",
+  "id_producto": "PMR00005",
+  "nombre": "Básica",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 10000,
+  "precio_contado": 7900,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera básica.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504833/products/lzgr1rgykiy5w6c6rgia.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504835/products/ifmjeklhhtnpkud9vz25.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734aac5591fe9333bb75e6c"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734aac5591fe9333bb75e6d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHC00001",
+  "id_producto": "PHC00001",
+  "nombre": "Ártico",
+  "genero": "Hombre",
+  "categoria": "Camisa",
+  "precio_venta": 45100,
+  "precio_contado": 36000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Camisa de algodón en azul con rayas verticales y cuello mao.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731504968/products/vdzeyarnku8vymk78msr.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "M",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734ab4a591fe9333bb75e70"
+      }
+    },
+    {
+      "talla": "L",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734ab4a591fe9333bb75e71"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHC00002",
+  "id_producto": "PHC00002",
+  "nombre": "Albatros",
+  "genero": "Hombre",
+  "categoria": "Camisa",
+  "precio_venta": 54500,
+  "precio_contado": 43600,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Camisa blanca con finas rayas verticales y cuello mao.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731505117/products/gh3seovngfcwzzkntsgt.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "M",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734abdf591fe9333bb75e7a"
+      }
+    },
+    {
+      "talla": "L",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734abdf591fe9333bb75e7b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMR00006",
+  "id_producto": "PMR00006",
+  "nombre": "Nature",
+  "genero": "Mujer",
+  "categoria": "Remera",
+  "precio_venta": 16730,
+  "precio_contado": 13300,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca con estampa morada.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731505226/products/zdoqkhcal12gkrat9stu.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731505228/products/tepd7cyh0jmfyue37j51.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734ac4e591fe9333bb75e8c"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734ac4e591fe9333bb75e8d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00001",
+  "id_producto": "PHR00001",
+  "nombre": "Astronaut",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 23500,
+  "precio_contado": 18700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera negra con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731515629/products/xnwonus5ln2ac050ca4s.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731515630/products/ugoco3b2essqa7qzozo7.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Negro",
+      "stock": 2,
+      "_id": {
+        "$oid": "6734d4ef9fe42ff66d1203ac"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00002",
+  "id_producto": "PHR00002",
+  "nombre": "Pace",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 20860,
+  "precio_contado": 16600,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731515726/products/ee95nwbpkzqw4siqufiu.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d54f9fe42ff66d1203b1"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d54f9fe42ff66d1203b2"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00003",
+  "id_producto": "PHR00003",
+  "nombre": "Diego",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 23500,
+  "precio_contado": 18700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731515807/products/lcnaebdjmbkvrft42nvw.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731515809/products/wcxkijnasmn61zrvp54o.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d5a29fe42ff66d1203ba"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d5a29fe42ff66d1203bb"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00004",
+  "id_producto": "PHR00004",
+  "nombre": "Colmena",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 26400,
+  "precio_contado": 21100,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516115/products/otuutz5g5oc0mczdjfeq.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d6d49fe42ff66d1203c6"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d6d49fe42ff66d1203c7"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00005",
+  "id_producto": "PHR00005",
+  "nombre": "1989",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 20860,
+  "precio_contado": 16600,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera beige over.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516422/products/qukyuyz7spjm1eqiawvi.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516424/products/oel2agrmwte653vdfvoa.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d80a9fe42ff66d1203d5"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d80a9fe42ff66d1203d6"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00006",
+  "id_producto": "PHR00006",
+  "nombre": "Faith",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 23500,
+  "precio_contado": 18700,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516547/products/y7a8nprxfzhalivclam7.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516549/products/cwtflv3djo9xroy4hxl3.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d8879fe42ff66d1203e7"
+      }
+    },
+    {
+      "talla": "M",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d8879fe42ff66d1203e8"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00007",
+  "id_producto": "PHR00007",
+  "nombre": "Outsiders",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 20500,
+  "precio_contado": 16300,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera beige con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516722/products/bksnxabbnkwxvpyt0c6q.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731516724/products/gnjzapp4tqeevjfnnkk6.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "M",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734d9369fe42ff66d1203fc"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHR00008",
+  "id_producto": "PHR00008",
+  "nombre": "Message",
+  "genero": "Hombre",
+  "categoria": "Remera",
+  "precio_venta": 18770,
+  "precio_contado": 15000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Remera blanca con estampa.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517030/products/v81aiygby42urhj2e4lt.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517031/products/phifx8pzq3q0hdwdpj8r.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "S",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734da699fe42ff66d120412"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMP00001",
+  "id_producto": "PMP00001",
+  "nombre": "Lirio",
+  "genero": "Mujer",
+  "categoria": "Pollera",
+  "precio_venta": 37600,
+  "precio_contado": 30000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Pollera.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517553/products/jx9zxsx5py8hk5bmgfsa.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517554/products/qbr40xon4hrfjynyabqe.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "26",
+      "color": "Manteca",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dc749fe42ff66d120415"
+      }
+    },
+    {
+      "talla": "26",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dc749fe42ff66d120416"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMS00001",
+  "id_producto": "PMS00001",
+  "nombre": "Cedro",
+  "genero": "Mujer",
+  "categoria": "Short",
+  "precio_venta": 21025,
+  "precio_contado": 16800,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Short negro.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517691/products/u48czixfqaruio0odpx6.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dcfd9fe42ff66d120419"
+      }
+    },
+    {
+      "talla": "T2",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dcfd9fe42ff66d12041a"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMP00002",
+  "id_producto": "PMP00002",
+  "nombre": "Costa",
+  "genero": "Mujer",
+  "categoria": "Pollera",
+  "precio_venta": 18800,
+  "precio_contado": 15000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Pollera a rayas.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517904/products/v7ese2z4kmrjspufaq1f.jpg",
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517906/products/i5pedzprefqubxxsbz5e.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Gris",
+      "stock": 2,
+      "_id": {
+        "$oid": "6734ddd39fe42ff66d120454"
+      }
+    },
+    {
+      "talla": "T1",
+      "color": "Beige",
+      "stock": 2,
+      "_id": {
+        "$oid": "6734ddd39fe42ff66d120455"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMS00002",
+  "id_producto": "PMS00002",
+  "nombre": "Sahara",
+  "genero": "Mujer",
+  "categoria": "Short",
+  "precio_venta": 30100,
+  "precio_contado": 24000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Short.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731518078/products/nujabre3vtayanrltiov.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "24",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734de7f9fe42ff66d12045b"
+      }
+    },
+    {
+      "talla": "26",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734de7f9fe42ff66d12045c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMS00003",
+  "id_producto": "PMS00003",
+  "nombre": "Carbono",
+  "genero": "Mujer",
+  "categoria": "Short",
+  "precio_venta": 30100,
+  "precio_contado": 24000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Short negro.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731518252/products/l2rmaedx2fvrcqjrcwzw.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "24",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734df2d9fe42ff66d120465"
+      }
+    },
+    {
+      "talla": "26",
+      "color": "Negro",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734df2d9fe42ff66d120466"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMS00004",
+  "id_producto": "PMS00004",
+  "nombre": "Cielo",
+  "genero": "Mujer",
+  "categoria": "Short",
+  "precio_venta": 20700,
+  "precio_contado": 16500,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Short pollera.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731518383/products/hs69a5lwc7nu2mcjefhz.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dfb19fe42ff66d120472"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PMS00005",
+  "id_producto": "PMS00005",
+  "nombre": "Perla",
+  "genero": "Mujer",
+  "categoria": "Short",
+  "precio_venta": 22500,
+  "precio_contado": 18000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Short blanco.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731518460/products/kig5ppog6idqkzauqcd7.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "T1",
+      "color": "Blanco",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734dffe9fe42ff66d120480"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHB00001",
+  "id_producto": "PHB00001",
+  "nombre": "Bahía",
+  "genero": "Hombre",
+  "categoria": "Bermuda",
+  "precio_venta": 41320,
+  "precio_contado": 33000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Bermuda jean.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731524762/products/nxrphcn1vpeabn396y9q.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "38",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f89c5bdda3a1f69c7e31"
+      }
+    },
+    {
+      "talla": "40",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f89c5bdda3a1f69c7e32"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHB00002",
+  "id_producto": "PHB00002",
+  "nombre": "Neblina",
+  "genero": "Hombre",
+  "categoria": "Bermuda",
+  "precio_venta": 28165,
+  "precio_contado": 22500,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Bermuda jean color negro.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731524840/products/mksvtzxlnmfjlq327ggg.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "38",
+      "color": "Negro",
+      "stock": 2,
+      "_id": {
+        "$oid": "6734f8ea5bdda3a1f69c7e38"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHB00003",
+  "id_producto": "PHB00003",
+  "nombre": "Laguna",
+  "genero": "Hombre",
+  "categoria": "Bermuda",
+  "precio_venta": 37560,
+  "precio_contado": 30000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Bermuda jean.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731524897/products/xqawyotgucklleumnmii.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "42",
+      "color": "Celeste",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f9235bdda3a1f69c7e40"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHB00004",
+  "id_producto": "PHB00004",
+  "nombre": "Cargo",
+  "genero": "Hombre",
+  "categoria": "Bermuda",
+  "precio_venta": 48835,
+  "precio_contado": 39000,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Bermuda cargo.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731525007/products/nizjtgif6xfjwsrhkgsp.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "42",
+      "color": "Verde",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f9915bdda3a1f69c7e4a"
+      }
+    },
+    {
+      "talla": "44",
+      "color": "Verde",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f9915bdda3a1f69c7e4b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": "PHB00005",
+  "id_producto": "PHB00005",
+  "nombre": "Lino",
+  "genero": "Hombre",
+  "categoria": "Bermuda",
+  "precio_venta": 46955,
+  "precio_contado": 37500,
+  "tiene_descuento": false,
+  "valor_descuento": 0,
+  "activo": true,
+  "descripcion": "Bermuda lino beige.",
+  "fotos": [
+    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731525089/products/ozfzdiex4rqpbntcmmob.jpg"
+  ],
+  "variantes": [
+    {
+      "talla": "44",
+      "color": "Beige",
+      "stock": 1,
+      "_id": {
+        "$oid": "6734f9e35bdda3a1f69c7e58"
+      }
+    }
+  ],
+  "__v": 0
+}]

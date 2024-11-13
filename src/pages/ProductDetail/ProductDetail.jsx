@@ -1,14 +1,14 @@
 import styles from './ProductDetail.module.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'react-medium-image-zoom/dist/styles.css';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../../components/Cuotas/Cuotas';
 import DescuentoContado from '../../components/DescuentoContado/DescuentoContado';
 import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
 import WhatsAppButton from '../../components/WhatsAppButton/WhatsAppButton';
 
 const ProductDetail = () => {
