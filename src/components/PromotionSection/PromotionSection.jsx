@@ -9,7 +9,7 @@ const PromotionSection = () => {
         <section className={styles.promotionSection}>
             <div className={styles.container}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.title}>Aprovecha Nuestras Promociones</h1>
+                    <h1 className={styles.title}>{"Aprovecha nuestras promociones".toLocaleUpperCase()}</h1>
                     <div className={styles.promotions}>
                         <div className={styles.promotionItem}>
                             <FaCreditCard className={styles.icon} />
@@ -18,8 +18,8 @@ const PromotionSection = () => {
                         </div>
                         <div className={styles.promotionItem}>
                             <FaDollarSign className={styles.icon} />
-                            <h2 className={styles.subtitle}>Promoción de Contado</h2>
-                            <p className={styles.description}>Descuentos especiales en efectivo</p>
+                            <h2 className={styles.subtitle}>Promociones especiales</h2>
+                            <p className={styles.description}>En efectivo y transferencia</p>
                         </div>
                     </div>
                     <div className={styles.buttonContainer}>
