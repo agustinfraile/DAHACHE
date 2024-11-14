@@ -1,6 +1,7 @@
+import styles from './Home.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductList from '../../components/ProductList/ProductList';
-import styles from './Home.module.css';
+import PromotionSection from '../../components/PromotionSection/PromotionSection';
 import { useEffect } from 'react';
 import { getProducts } from '../../redux/actions';
 
@@ -12,14 +13,11 @@ const Home = () => {
     dispatch(getProducts());
   }, [dispatch]);
 
-  const featuredProducts = products.slice(0, 3); // Limitar a productos destacados
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <section className={styles.home}>
-      <section className={styles.heroSection}>
-        <h1>Elegancia en cada prenda</h1>
-        <p>Descubre la nueva colección de verano</p>
-      </section>
+      <PromotionSection />
 
       <section className={styles.featuredProducts}>
         <h2>Productos destacados</h2>
