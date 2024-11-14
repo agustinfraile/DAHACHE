@@ -8,6 +8,8 @@ const ProductList = ({ products, loading, error }) => {
 
     if (!products || products.length === 0) return <p>No hay productos para mostrar.</p>;
 
+    
+
     return (
         <div className={styles.productGrid}>
             {products.map((product) => (
@@ -20,6 +22,7 @@ const ProductList = ({ products, loading, error }) => {
                         imageUrl={product.fotos}
                         name={product.nombre}
                         price={product.precio_venta}
+                        category={product.categoria}
                     />
                 </Link>
             ))}

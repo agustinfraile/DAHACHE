@@ -59,7 +59,7 @@ const ProductDetail = () => {
         </div>
 
         <div className={styles.productInfo}>
-          <h1 className={styles.productName}>{productDetail.nombre}</h1>
+          <h1 className={styles.productName}>{`${productDetail.categoria} ${productDetail.nombre}`}</h1>
           <div className={styles.productPriceContainer}>${precioSinDecimales}</div>
           <p className={styles.productDescription}>{productDetail.descripcion}</p>
 
