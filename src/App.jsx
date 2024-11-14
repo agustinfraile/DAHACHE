@@ -5,10 +5,12 @@ import ProductDetail from './pages/ProductDetail/ProductDetail'
 import ManCollection from './pages/ManCollection/ManCollection'
 import WomenCollection from './pages/WomenCollection/WomenCollection'
 import Navbar from './components/Navbar/Navbar'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
