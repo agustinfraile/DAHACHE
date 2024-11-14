@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../Cuotas/Cuotas';
 
-const ProductCard = ({ imageUrl = [], name, price }) => {
+const ProductCard = ({ imageUrl = [], name, price, category }) => {
   // Formatear precio sin decimales
   const formattedPrice = Math.floor(price).toLocaleString('es-AR');
 
@@ -32,7 +32,7 @@ const ProductCard = ({ imageUrl = [], name, price }) => {
         </Swiper>
       </div>
       <div className={styles.info}>
-        <h2 className={styles.name}>{name}</h2>
+        <h2 className={styles.name}>{`${category} ${name}`}</h2>
         {/* Precio formateado sin decimales */}
         <p className={styles.price}>${formattedPrice}</p>
         {/* Cuotas sin interés */}

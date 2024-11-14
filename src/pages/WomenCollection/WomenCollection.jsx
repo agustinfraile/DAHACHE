@@ -59,6 +59,7 @@ const WomenCollection = () => {
                             imageUrl={product.fotos}
                             name={product.nombre}
                             price={product.precio_venta}
+                            category={product.categoria}
                         />
                     </Link>
                 ))}
