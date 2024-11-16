@@ -6,6 +6,7 @@ import ManCollection from './pages/ManCollection/ManCollection'
 import WomenCollection from './pages/WomenCollection/WomenCollection'
 import Navbar from './components/Navbar/Navbar'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/coleccionhombre" element={<ManCollection />} />
         <Route path="/coleccionmujer" element={<WomenCollection />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

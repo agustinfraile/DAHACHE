@@ -1,0 +1,64 @@
+.footer {
+    background-color: #000;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto blanco */
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Separación entre iconos */
+    margin-bottom: 1rem;
+}
+
+.iconLink {
+    color: #fff;
+    font-size: 1.5rem;
+    /* Tamaño inicial de los iconos */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.iconLink:hover {
+    color: #F97992;
+    /* Cambia a rosa al pasar el mouse */
+    transform: scale(1.1);
+    /* Agranda el icono ligeramente */
+}
+
+.copy {
+    font-size: 0.875rem;
+    /* Tamaño pequeño para el texto */
+    color: #aaa;
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablets (768px y más grandes) */
+@media (min-width: 768px) {
+    .iconLink {
+        font-size: 2rem;
+        /* Agrandar los iconos */
+    }
+
+    .copy {
+        font-size: 1rem;
+        /* Texto más grande en pantallas más grandes */
+    }
+}
+
+/* Desktop (1024px y más grandes) */
+@media (min-width: 1024px) {
+    .footer {
+        padding: 2rem;
+        /* Más espacio en pantallas grandes */
+    }
+
+    .iconLink {
+        font-size: 2.5rem;
+        /* Iconos más grandes en desktop */
+    }
+}
