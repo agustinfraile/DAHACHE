@@ -1,5 +1,4 @@
 // PromotionSection.jsx
-import React from 'react';
 import styles from './PromotionSection.module.css';
 import { FaCreditCard, FaDollarSign } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
