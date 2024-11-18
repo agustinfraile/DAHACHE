@@ -1,56 +1,128 @@
+/* Estilos Generales */
 .productDetailContainer {
-    background-color: aquamarine;
     width: 100%;
     min-height: 100vh;
     padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .productDetail {
-    background-color: rgb(50, 133, 205);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     width: 90%;
     height: auto;
     margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Carrusel de Imágenes */
 .imageCarousel {
-    background-color: blueviolet;
-    width: 75%;
-    height: fit-content;
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .productImage {
-    width: fit-content;
-    max-height: 400px;
-}
-
-.productInfo {
-    background-color: chartreuse;
-    padding: 1rem 0;
-}
-
-.productName {
-    background-color: blue;
     width: 100%;
     height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Detalles del Producto */
+.productInfo {
+    padding: 1rem;
     text-align: center;
 }
 
+.productName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
 .productDescription {
-    background-color: blue;
-    width: 100%;
-    height: auto;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.productPriceContainer {
+    background-color: #536C8D;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .cuotaMensual {
-    background-color: blue;
-    width: 100%;
-    height: auto;
+    font-size: 1rem;
+    color: #536C8D;
+    margin-top: 0.5rem;
 }
 
 .buttonContainer {
-    background-color: black;
-    width: 100%;
-    height: auto;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 768px) {
+    .productDetail {
+        flex-direction: row;
+        gap: 2rem;
+        width: 80%;
+    }
+
+    .imageCarousel {
+        width: 50%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .productImage {
+        max-height: 600px;
+    }
+
+    .productInfo {
+        width: 50%;
+        text-align: left;
+        padding: 2rem;
+    }
+
+    .productName {
+        font-size: 2.5rem;
+    }
+
+    .productPriceContainer {
+        font-size: 2rem;
+    }
+
+    .productDescription {
+        font-size: 1.2rem;
+    }
+
+    .cuotaMensual {
+        font-size: 1.1rem;
+    }
+
+    .buttonContainer {
+        justify-content: flex-start;
+    }
 }
