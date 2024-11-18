@@ -303,51 +303,51 @@
   ],
   "__v": 0
 },
-{
-  "_id": "PMR00003",
-  "id_producto": "PMR00003",
-  "nombre": "Ondina",
-  "genero": "Mujer",
-  "categoria": "Remera",
-  "precio_venta": 14700,
-  "precio_contado": 11700,
-  "tiene_descuento": false,
-  "valor_descuento": 0,
-  "activo": true,
-  "descripcion": "Camiseta de manga corta con escote en V y delicados detalles ondulados.",
-  "fotos": [
-    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503232/products/ttrfkpefxs52whyfbtwt.jpg",
-    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503234/products/e88tuxsjrdjo1inoinci.jpg",
-    "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503237/products/hj9fiuaxneibd3b27qfd.jpg"
-  ],
-  "variantes": [
-    {
-      "talla": "T1",
-      "color": "Rosa",
-      "stock": 1,
-      "_id": {
-        "$oid": "6734a487591fe9333bb75e23"
+  {
+    "_id": "PMR00003",
+    "id_producto": "PMR00003",
+    "nombre": "Ondina",
+    "genero": "Mujer",
+    "categoria": "Remera",
+    "precio_venta": 14700,
+    "precio_contado": 11700,
+    "tiene_descuento": false,
+    "valor_descuento": 0,
+    "activo": true,
+    "descripcion": "Camiseta de manga corta con escote en V y delicados detalles ondulados.",
+    "fotos": [
+      "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503232/products/ttrfkpefxs52whyfbtwt.jpg",
+      "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503234/products/e88tuxsjrdjo1inoinci.jpg",
+      "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731503237/products/hj9fiuaxneibd3b27qfd.jpg"
+    ],
+    "variantes": [
+      {
+        "talla": "T1",
+        "color": "Rosa",
+        "stock": 1,
+        "_id": {
+          "$oid": "6734a487591fe9333bb75e23"
+        }
+      },
+      {
+        "talla": "T1",
+        "color": "Negro",
+        "stock": 1,
+        "_id": {
+          "$oid": "6734a487591fe9333bb75e24"
+        }
+      },
+      {
+        "talla": "T1",
+        "color": "Blanco",
+        "stock": 1,
+        "_id": {
+          "$oid": "6734a487591fe9333bb75e25"
+        }
       }
-    },
-    {
-      "talla": "T1",
-      "color": "Negro",
-      "stock": 1,
-      "_id": {
-        "$oid": "6734a487591fe9333bb75e24"
-      }
-    },
-    {
-      "talla": "T1",
-      "color": "Blanco",
-      "stock": 1,
-      "_id": {
-        "$oid": "6734a487591fe9333bb75e25"
-      }
-    }
-  ],
-  "__v": 0
-},
+    ],
+    "__v": 0
+  },
 {
   "_id": "PMB00004",
   "id_producto": "PMB00004",
