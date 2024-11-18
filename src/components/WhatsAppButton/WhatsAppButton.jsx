@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const WhatsAppButton = ({ nombre, precio }) => {
     const location = useLocation();
     const productUrl = `${window.location.origin}${location.pathname}`;
-    const YOUR_PHONE_NUMBER = "+5493815537013";
+    const YOUR_PHONE_NUMBER = "+5493814062267";
     const message = `
         Hola! Quiero consultar sobre este producto:
   
