@@ -72,15 +72,15 @@ const BlackFridayHero = () => {
                         </div>
                         <div className={styles.countdownItem}>
                             <span className={styles.countdownValue}>{timeLeft.hours}</span>
-                            <span className={styles.countdownLabel}>Horas</span>
+                            <span className={styles.countdownLabel}>Hs</span>
                         </div>
                         <div className={styles.countdownItem}>
                             <span className={styles.countdownValue}>{timeLeft.minutes}</span>
-                            <span className={styles.countdownLabel}>Minutos</span>
+                            <span className={styles.countdownLabel}>Min</span>
                         </div>
                         <div className={styles.countdownItem}>
                             <span className={styles.countdownValue}>{timeLeft.seconds}</span>
-                            <span className={styles.countdownLabel}>Segundos</span>
+                            <span className={styles.countdownLabel}>Seg</span>
                         </div>
                     </div>
                 </div>
