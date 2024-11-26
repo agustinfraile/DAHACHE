@@ -164,13 +164,13 @@
   "id_producto": "PMM00001",
   "nombre": "Duna",
   "genero": "Mujer",
-  "categoria": "Musculosa",
+  "categoria": "Chaleco",
   "precio_venta": 18300,
   "precio_contado": 14500,
   "tiene_descuento": false,
   "valor_descuento": 0,
   "activo": true,
-  "descripcion": "Musculosa con rayas finas en tono neutro.",
+  "descripcion": "Chaleco con rayas finas en tono neutro.",
   "fotos": [
     "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731501940/products/jtkid741ozetddiwwi3m.jpg"
   ],
