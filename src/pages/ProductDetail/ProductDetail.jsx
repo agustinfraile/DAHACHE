@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../../components/Cuotas/Cuotas';
 import DescuentoContado from '../../components/DescuentoContado/DescuentoContado';
+import DescuentoEspecialProducto from '../../components/DescuentoEspecialProducto/DescuentoEspecialProducto';
 import Zoom from 'react-medium-image-zoom';
 import WhatsAppButton from '../../components/WhatsAppButton/WhatsAppButton';
 import { useEffect } from 'react';
@@ -29,12 +30,13 @@ const ProductDetail = () => {
   }
 
   const cuotasSinInteres = productDetail.cuotas_sin_interes || 3;
-  const valorCuota = (productDetail.precio_venta / cuotasSinInteres).toLocaleString('es-AR', {
+  const valorCuota = (productDetail.precio_venta_promo / cuotasSinInteres).toLocaleString('es-AR', {
     style: 'currency',
     currency: 'ARS',
   });
 
-  const precioSinDecimales = Math.floor(productDetail.precio_venta).toLocaleString('es-AR');
+  const precioVenta = productDetail.precio_venta;
+  const precioVentaPromo = productDetail.precio_venta_promo;
 
   return (
     <div className={styles.productDetailContainer}>
@@ -51,7 +53,11 @@ const ProductDetail = () => {
             {productDetail.fotos.map((foto, index) => (
               <SwiperSlide key={index}>
                 <Zoom>
-                  <img src={foto} alt={`Foto ${index + 1}`} className={styles.productImage} />
+                  <img
+                    src={foto}
+                    alt={`Foto ${index + 1}`}
+                    className={styles.productImage}
+                  />
                 </Zoom>
               </SwiperSlide>
             ))}
@@ -60,19 +66,19 @@ const ProductDetail = () => {
 
         <div className={styles.productInfo}>
           <h1 className={styles.productName}>{`${productDetail.categoria} ${productDetail.nombre}`}</h1>
-          <div className={styles.productPriceContainer}>${precioSinDecimales}</div>
+          <DescuentoEspecialProducto precioAnterior={precioVenta} precioActual={precioVentaPromo} />
           <p className={styles.productDescription}>{productDetail.descripcion}</p>
 
           <Cuotas />
-          <p className={styles.cuotaMensual}>Cuota mensual: {valorCuota}</p>
+          <p className={styles.cuotaMensual}>{cuotasSinInteres} cuotas sin interés de: {valorCuota}</p>
 
           <DescuentoContado
-            precioVenta={productDetail.precio_venta}
+            precioVenta={precioVenta}
             precioContado={productDetail.precio_contado}
           />
 
           <div className={styles.buttonContainer}>
-            <WhatsAppButton nombre={productDetail.nombre} precio={productDetail.precio_venta} />
+            <WhatsAppButton nombre={productDetail.nombre} precio={precioVentaPromo} />
           </div>
         </div>
       </div>
@@ -80,4 +86,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail; 
+export default ProductDetail;
