@@ -50,47 +50,71 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas si es necesario */
-  }
-  
-  .countdownItem {
+    flex-wrap: wrap;
+    /* Permitir que los elementos se ajusten en varias líneas si es necesario */
+}
+
+.countdownItem {
     background-color: white;
     color: black;
     padding: 1rem;
     border-radius: 0.5rem;
-    width: 80px; /* Ancho fijo adecuado para texto */
+    width: 80px;
+    /* Ancho fijo adecuado para texto */
     text-align: center;
     box-sizing: border-box;
-    flex-shrink: 0; /* Evitar que se comprima el contenido */
-  }
-  
-  .countdownValue {
+    flex-shrink: 0;
+    /* Evitar que se comprima el contenido */
+}
+
+.countdownValue {
     font-size: 1.5rem;
     font-weight: bold;
-    white-space: nowrap; /* Evitar el salto de línea */
-  }
-  
-  .countdownLabel {
+    white-space: nowrap;
+    /* Evitar el salto de línea */
+}
+
+.countdownLabel {
     font-size: 0.75rem;
-    white-space: nowrap; /* Evitar el salto de línea */
-  }
-  
-  @media (max-width: 768px) {
+    white-space: nowrap;
+    /* Evitar el salto de línea */
+}
+
+@media (max-width: 768px) {
     .countdown {
-      gap: 0.5rem; /* Reducir el espacio entre elementos en pantallas pequeñas */
+        gap: 0.5rem;
+        /* Reducir el espacio entre elementos en pantallas pequeñas */
     }
-  
+
     .countdownItem {
-      width: 70px; /* Ajustar ancho para dispositivos más pequeños */
-      padding: 0.75rem; /* Reducir padding */
+        width: 70px;
+        /* Ajustar ancho para dispositivos más pequeños */
+        padding: 0.75rem;
+        /* Reducir padding */
     }
-  
+
     .countdownValue {
-      font-size: 1.2rem; /* Reducir tamaño de fuente */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
     }
-  
+
     .countdownLabel {
-      font-size: 0.6rem; /* Reducir tamaño de fuente */
+        font-size: 0.6rem;
+        /* Reducir tamaño de fuente */
     }
-  }
-  
+}
+
+@media (max-width: 425px) {
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+
+    .countdownItem {
+        width: 70px;
+        padding: 1rem;
+    }
+
+
+}
