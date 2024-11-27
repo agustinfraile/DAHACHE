@@ -42,28 +42,10 @@ const BlackFridayHero = () => {
         <section className={styles.heroSection}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <h1 className={`${styles.title} animate-pulse`}>BLACK FRIDAY</h1>
+                    <h1 className={`${styles.title} animate-pulse`}>LLEGÓ EL BLACK FRIDAY</h1>
                     <p className={styles.subtitle}>
                         Hasta <span className={styles.highlight}>70% OFF</span> en productos seleccionados
                     </p>
-                    <div className={styles.countdown}>
-                        <div className={styles.countdownItem}>
-                            <span className={styles.countdownValue}>{timeLeft.days}</span>
-                            <span className={styles.countdownLabel}>Días</span>
-                        </div>
-                        <div className={styles.countdownItem}>
-                            <span className={styles.countdownValue}>{timeLeft.hours}</span>
-                            <span className={styles.countdownLabel}>Horas</span>
-                        </div>
-                        <div className={styles.countdownItem}>
-                            <span className={styles.countdownValue}>{timeLeft.minutes}</span>
-                            <span className={styles.countdownLabel}>Minutos</span>
-                        </div>
-                        <div className={styles.countdownItem}>
-                            <span className={styles.countdownValue}>{timeLeft.seconds}</span>
-                            <span className={styles.countdownLabel}>Segundos</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
