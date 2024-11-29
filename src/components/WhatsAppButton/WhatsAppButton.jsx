@@ -11,8 +11,6 @@ const WhatsAppButton = ({ nombre, precio }) => {
         Hola! Quiero consultar sobre este producto:
   
         Nombre: ${nombre}
-        Precio: ${precio.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}
-
         Link: ${productUrl}
     `;
 

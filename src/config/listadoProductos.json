@@ -576,7 +576,7 @@
     "genero": "Hombre",
     "categoria": "Camisa",
     "precio_venta": 45100,
-    "precio_venta_promo": 40590,
+    "precio_venta_promo": 33100,
     "activo": true,
     "descripcion": "Camisa de algodón en azul con rayas verticales y cuello mao.",
     "fotos": [
@@ -602,7 +602,7 @@
     "genero": "Hombre",
     "categoria": "Camisa",
     "precio_venta": 54500,
-    "precio_venta_promo": 49050,
+    "precio_venta_promo": 38200,
     "activo": true,
     "descripcion": "Camisa blanca con finas rayas verticales y cuello mao.",
     "fotos": [
@@ -628,7 +628,7 @@
     "genero": "Hombre",
     "categoria": "Remera",
     "precio_venta": 23500,
-    "precio_venta_promo": 21150,
+    "precio_venta_promo": 16500,
     "activo": true,
     "descripcion": "Remera negra con estampa.",
     "fotos": [
@@ -649,7 +649,7 @@
     "genero": "Hombre",
     "categoria": "Remera",
     "precio_venta": 20860,
-    "precio_venta_promo": 18774,
+    "precio_venta_promo": 16400,
     "activo": true,
     "descripcion": "Remera blanca con estampa.",
     "fotos": [
@@ -675,7 +675,7 @@
     "genero": "Hombre",
     "categoria": "Remera",
     "precio_venta": 23500,
-    "precio_venta_promo": 21150,
+    "precio_venta_promo": 16500,
     "activo": true,
     "descripcion": "Remera blanca con estampa.",
     "fotos": [
@@ -701,7 +701,7 @@
     "genero": "Hombre",
     "categoria": "Bermuda",
     "precio_venta": 41320,
-    "precio_venta_promo": 37188,
+    "precio_venta_promo": 30300,
     "activo": true,
     "descripcion": "Bermuda jean.",
     "fotos": [
@@ -727,7 +727,7 @@
     "genero": "Hombre",
     "categoria": "Bermuda",
     "precio_venta": 28165,
-    "precio_venta_promo": 25349,
+    "precio_venta_promo": 21000,
     "activo": true,
     "descripcion": "Bermuda jean color negro.",
     "fotos": [
@@ -748,7 +748,7 @@
     "genero": "Hombre",
     "categoria": "Bermuda",
     "precio_venta": 37560,
-    "precio_venta_promo": 33704,
+    "precio_venta_promo": 21000 ,
     "activo": true,
     "descripcion": "Bermuda jean.",
     "fotos": [
@@ -761,5 +761,32 @@
         "stock": 1
       }
     ]
-  }
+  },
+  {
+    "_id": "PHR00008",
+    "id_producto": "PHR00008",
+    "nombre": "Message",
+    "genero": "Hombre",
+    "categoria": "Remera",
+    "precio_venta": 18770,
+    "precio_venta_promo": 13000,
+    "activo": true,
+    "descripcion": "Remera blanca con estampa.",
+    "fotos": [
+      "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517030/products/v81aiygby42urhj2e4lt.jpg",
+      "https://res.cloudinary.com/dmz6gyyoo/image/upload/v1731517031/products/phifx8pzq3q0hdwdpj8r.jpg"
+    ],
+    "variantes": [
+      {
+        "talla": "S",
+        "color": "Blanco",
+        "stock": 1,
+        "_id": {
+          "$oid": "6734da699fe42ff66d120412"
+        }
+      }
+    ],
+    "__v": 0
+  } 
+  
 ]

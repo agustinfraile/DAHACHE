@@ -37,7 +37,8 @@ const ProductDetail = () => {
 
   const precioVenta = productDetail.precio_venta;
   const precioVentaPromo = productDetail.precio_venta_promo;
-
+  const porcentajeDescuentoTransferencia = 0.8;
+  const descuentoTransferencia = precioVentaPromo * porcentajeDescuentoTransferencia; 
   return (
     <div className={styles.productDetailContainer}>
       <div className={styles.productDetail}>
@@ -70,15 +71,14 @@ const ProductDetail = () => {
           <p className={styles.productDescription}>{productDetail.descripcion}</p>
 
           <Cuotas />
-          <p className={styles.cuotaMensual}>{cuotasSinInteres} cuotas sin interés de: {valorCuota}</p>
+          <p className={styles.cuotaMensual}>{cuotasSinInteres} cuotas sin interés de: {valorCuota} </p>
 
           <DescuentoContado
             precioVenta={precioVenta}
-            precioContado={productDetail.precio_contado}
           />
 
           <div className={styles.buttonContainer}>
-            <WhatsAppButton nombre={productDetail.nombre} precio={precioVentaPromo} />
+            <WhatsAppButton nombre={productDetail.nombre} />
           </div>
         </div>
       </div>
