@@ -7,29 +7,23 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fadeIn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fadeOut {
-    opacity: 0;
-    transform: translateY(-20px);
-    /* Movimiento suave hacia arriba */
+    margin-bottom: 1.5rem;
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -45,76 +39,36 @@
     margin-bottom: 2rem;
 }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    /* Permitir que los elementos se ajusten en varias líneas si es necesario */
-}
-
 .countdownItem {
     background-color: white;
     color: black;
-    padding: 1rem;
     border-radius: 0.5rem;
-    width: 80px;
-    /* Ancho fijo adecuado para texto */
+    padding: 1rem;
     text-align: center;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    /* Evitar que se comprima el contenido */
+    width: 5rem;
 }
 
 .countdownValue {
     font-size: 1.5rem;
     font-weight: bold;
-    white-space: nowrap;
-    /* Evitar el salto de línea */
+    display: block;
 }
 
 .countdownLabel {
-    font-size: 0.75rem;
-    white-space: nowrap;
-    /* Evitar el salto de línea */
+    font-size: 0.875rem;
 }
 
-@media (max-width: 768px) {
-    .countdown {
-        gap: 0.5rem;
-        /* Reducir el espacio entre elementos en pantallas pequeñas */
-    }
-
-    .countdownItem {
-        width: 70px;
-        /* Ajustar ancho para dispositivos más pequeños */
-        padding: 0.75rem;
-        /* Reducir padding */
-    }
-
-    .countdownValue {
-        font-size: 1.2rem;
-        /* Reducir tamaño de fuente */
-    }
-
-    .countdownLabel {
-        font-size: 0.6rem;
-        /* Reducir tamaño de fuente */
-    }
+.shopButton {
+    background-color: #F97992;
+    color: white;
+    font-size: 1.125rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 425px) {
-
-    .title {
-        font-size: 2.2rem;
-    }
-
-
-    .countdownItem {
-        width: 70px;
-        padding: 1rem;
-    }
-
-
+.shopButton:hover {
+    background-color: #F97992cc;
 }

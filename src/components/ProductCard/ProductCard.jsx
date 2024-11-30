@@ -4,11 +4,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import Cuotas from '../Cuotas/Cuotas';
+import DescuentoEspecialProducto from '../DescuentoEspecialProducto/DescuentoEspecialProducto';
 
-const ProductCard = ({ imageUrl = [], name, price, category }) => {
-  // Formatear precio sin decimales
-  const formattedPrice = Math.floor(price).toLocaleString('es-AR');
-
+const ProductCard = ({ imageUrl = [], name, price, promoPrice, category }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
@@ -23,7 +21,7 @@ const ProductCard = ({ imageUrl = [], name, price, category }) => {
           {imageUrl.map((foto, index) => (
             <SwiperSlide key={index}>
               <img
-                src={foto}
+                src={foto}F
                 alt={`${name} - Foto ${index + 1}`}
                 className={styles.image}
               />
@@ -33,9 +31,9 @@ const ProductCard = ({ imageUrl = [], name, price, category }) => {
       </div>
       <div className={styles.info}>
         <h2 className={styles.name}>{`${category} ${name}`}</h2>
-        {/* Precio formateado sin decimales */}
-        <p className={styles.price}>${formattedPrice}</p>
-        {/* Cuotas sin interés */}
+        {/* Mostrar el precio tachado y el nuevo precio promocional */}
+        <DescuentoEspecialProducto precioAnterior={price} precioActual={promoPrice} />
+        {/* Sección de cuotas */}
         <Cuotas />
       </div>
     </div>

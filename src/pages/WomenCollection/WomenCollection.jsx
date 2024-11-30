@@ -55,10 +55,10 @@ const WomenCollection = () => {
                         style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                         <ProductCard
-                            key={product.id_producto}
                             imageUrl={product.fotos}
                             name={product.nombre}
                             price={product.precio_venta}
+                            promoPrice={product.precio_venta_promo}
                             category={product.categoria}
                         />
                     </Link>

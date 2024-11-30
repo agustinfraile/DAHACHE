@@ -1,17 +1,17 @@
 // DescuentoContado.jsx
 import styles from './DescuentoContado.module.css';
 
-const DescuentoContado = ({ precioVenta, precioContado }) => {
-    if (precioContado >= precioVenta) return null; // No mostrar el componente si no hay descuento
+const DescuentoContado = ({ precioVenta }) => {
 
-    const porcentajeDescuento = Math.round(((precioVenta - precioContado) / precioVenta) * 100);
 
+    const porcentajeDescuento = 0.8;
+    const precioDescuento = precioVenta * porcentajeDescuento;
     return (
         <div className={styles.descuentoContainer}>
-            <p className={styles.precioOriginal}>${precioVenta.toLocaleString('es-AR')}</p>
-            <p className={styles.precioContado}>${precioContado.toLocaleString('es-AR')}</p>
-            <p className={styles.descuentoEtiqueta}>Ahorra {porcentajeDescuento}%🔥🔥</p>
-            <p className={styles.pagoEfectivo}>Precio promocional pago en efectivo o transferencia</p>
+
+
+            <p className={styles.descuentoEtiqueta}>Ahorra 10% EXTRA🔥🔥</p>
+            <p className={styles.pagoEfectivo}>Pagando en efectivo o transferencia</p>
         </div>
     );
 };
