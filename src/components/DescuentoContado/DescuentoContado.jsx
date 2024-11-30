@@ -10,7 +10,7 @@ const DescuentoContado = ({ precioVenta }) => {
         <div className={styles.descuentoContainer}>
 
 
-            <p className={styles.descuentoEtiqueta}>Ahorra 20% EXTRA🔥🔥</p>
+            <p className={styles.descuentoEtiqueta}>Ahorra 10% EXTRA🔥🔥</p>
             <p className={styles.pagoEfectivo}>Pagando en efectivo o transferencia</p>
         </div>
     );
