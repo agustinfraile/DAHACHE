@@ -1,19 +1,17 @@
-import styles from "./WomenCollection.module.css";
+import styles from './WomenCollection.module.css';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../redux/actions';
-import { useEffect, useState } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { Link } from 'react-router-dom';
 import ProductCard from '../../components/ProductCard/ProductCard';
-import { Link } from "react-router-dom";
-import CollectionHeader from "../../components/CollectionHeader/CollectionHeader";
+import CollectionHeader from '../../components/CollectionHeader/CollectionHeader';
 
-const WomenCollection = () => {
+const ManCollection = () => {
     const dispatch = useDispatch();
     const { products, loading, error } = useSelector((state) => state);
 
+    const [categories, setCategories] = useState([]);
     const [visibleProducts, setVisibleProducts] = useState([]);
-    const [hasMore, setHasMore] = useState(true);
-    const ITEMS_PER_LOAD = 10;
 
     useEffect(() => {
         dispatch(getProducts());
@@ -22,33 +20,36 @@ const WomenCollection = () => {
     useEffect(() => {
         if (products.length > 0) {
             const filteredProducts = products.filter(product => product.genero === "Mujer");
-            setVisibleProducts(filteredProducts.slice(0, ITEMS_PER_LOAD));
+            setVisibleProducts(filteredProducts);
+
+            const uniqueCategories = [...new Set(filteredProducts.map(product => product.categoria))];
+            setCategories(uniqueCategories);
         }
     }, [products]);
 
-    const loadMoreProducts = () => {
-        const newVisibleProducts = products
-            .filter(product => product.genero === "Mujer")
-            .slice(0, visibleProducts.length + ITEMS_PER_LOAD);
-
-        setVisibleProducts(newVisibleProducts);
-        setHasMore(newVisibleProducts.length < products.filter(product => product.genero === "Mujer").length);
-    };
-
     return (
-        <section className={styles.collectionContainer}>
+        <div className={styles.collectionContainer}>
+            <CollectionHeader text="Colección Hombre" />
 
-            <CollectionHeader text="Colección Mujer" />
             {loading && <p>Cargando productos...</p>}
             {error && <p>Error al cargar los productos</p>}
-            <InfiniteScroll
-                dataLength={visibleProducts.length}
-                next={loadMoreProducts}
-                hasMore={hasMore}
-                loader={<p>Cargando más productos...</p>}
-                className={styles.productGrid}
-            >
-                {visibleProducts.map((product) => (
+
+            {/* Cajas de Categorías */}
+            <div className={styles.categoryGrid}>
+                {categories.map(category => (
+                    <Link
+                        to={`/categoria/mujer/${category.toLowerCase()}`}
+                        key={category}
+                        className={styles.categoryBox}
+                    >
+                        <span className={styles.categoryName}>{category}</span>
+                    </Link>
+                ))}
+            </div>
+
+            {/* Listado de Productos */}
+            <div className={styles.productGrid}>
+                {visibleProducts.map(product => (
                     <Link
                         to={`/product/${product.id_producto}`}
                         key={product.id_producto}
@@ -63,9 +64,9 @@ const WomenCollection = () => {
                         />
                     </Link>
                 ))}
-            </InfiniteScroll>
-        </section>
+            </div>
+        </div>
     );
-}
+};
 
-export default WomenCollection;
+export default ManCollection;

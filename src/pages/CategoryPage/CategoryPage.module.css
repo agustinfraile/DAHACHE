@@ -1,0 +1,18 @@
+.categoryPage {
+    min-height: 77vh;
+    width: 97%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
