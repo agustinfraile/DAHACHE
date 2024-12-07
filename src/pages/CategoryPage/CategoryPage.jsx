@@ -1,5 +1,5 @@
 import styles from "./CategoryPage.module.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import CollectionHeader from "../../components/CollectionHeader/CollectionHeader";
 
@@ -30,14 +30,21 @@ const CategoryPage = ({ products }) => {
 
             <div className={styles.productGrid}>
                 {filteredProducts.map((product) => (
-                    <ProductCard
+
+                    <Link
+                        to={`/product/${product.id_producto}`}
                         key={product.id_producto}
-                        imageUrl={product.fotos}
-                        name={product.nombre}
-                        price={product.precio_venta}
-                        promoPrice={product.precio_venta_promo}
-                        category={product.categoria}
-                    />
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
+                        <ProductCard
+                            key={product.id_producto}
+                            imageUrl={product.fotos}
+                            name={product.nombre}
+                            price={product.precio_venta}
+                            promoPrice={product.precio_venta_promo}
+                            category={product.categoria}
+                        />
+                    </Link>
                 ))}
             </div>
             {filteredProducts.length === 0 && <p>No se encontraron productos en esta categoría.</p>}
