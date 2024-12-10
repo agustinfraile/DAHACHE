@@ -29,7 +29,7 @@ const ManCollection = () => {
 
     return (
         <div className={styles.collectionContainer}>
-            <CollectionHeader text="Colección Hombre" />
+            <CollectionHeader text="Colección Mujer" />
 
             {loading && <p>Cargando productos...</p>}
             {error && <p>Error al cargar los productos</p>}
