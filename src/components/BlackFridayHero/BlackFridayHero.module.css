@@ -1,5 +1,5 @@
 .heroSection {
-    background-color: black;
+    background-color: #536C8D;
     color: white;
     padding: 5rem 0;
 }
@@ -28,7 +28,7 @@
 }
 
 .highlight {
-    color: #F97992;
+    color: #000000;
     font-weight: bold;
 }
 
