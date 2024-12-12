@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import styles from './BlackFridayHero.module.css';
+import styles from './PromotionHero.module.css';
 
-const BlackFridayHero = () => {
+const PromotionHero = () => {
 
 
     return (
@@ -18,4 +18,4 @@ const BlackFridayHero = () => {
     );
 };
 
-export default BlackFridayHero;
+export default PromotionHero;
