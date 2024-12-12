@@ -4,7 +4,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import PromotionSection from '../../components/PromotionSection/PromotionSection';
 import { useEffect } from 'react';
 import { getProducts } from '../../redux/actions';
-import BlackFridayHero from '../../components/BlackFridayHero/BlackFridayHero';
+import PromotionHero from '../../components/PromotionHero/PromotionHero';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <section className={styles.home}>
-      <BlackFridayHero />
+      <PromotionHero />
       <PromotionSection />
 
       <section className={styles.featuredProducts}>
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  

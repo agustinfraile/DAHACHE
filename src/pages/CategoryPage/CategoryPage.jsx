@@ -2,11 +2,20 @@ import styles from "./CategoryPage.module.css";
 import { Link, useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import CollectionHeader from "../../components/CollectionHeader/CollectionHeader";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const CategoryPage = ({ products }) => {
     const { genero, categoria } = useParams();
 
-    // Filtrar los productos por género y categoría
+    const { loading, error } = useSelector((state) => state);
+
+    const [categories, setCategories] = useState([]);
+
+    const [visibleProducts, setVisibleProducts] = useState([]);
+
+    const generoVerificado = genero[0].toUpperCase() + genero.slice(1, genero.length);
+
     const filteredProducts = products.filter(
         (product) =>
             product.genero.toLowerCase() === genero.toLowerCase() &&
@@ -14,18 +23,46 @@ const CategoryPage = ({ products }) => {
     );
 
     const capitalize = (text) => {
-        if (!text) return ''; // Maneja casos donde la variable sea undefined o null
+        if (!text) return '';
         return text
-            .toLowerCase() // Convierte todo el texto a minúsculas primero
-            .split(' ') // Divide las palabras por espacio (en caso de varias palabras)
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitaliza la primera letra de cada palabra
-            .join(' '); // Une las palabras nuevamente
+            .toLowerCase()
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
     };
 
+    useEffect(() => {
+        if (products.length > 0) {
+            const filteredProducts = products.filter(product => product.genero === generoVerificado);
+            setVisibleProducts(filteredProducts);
+
+            const uniqueCategories = [...new Set(filteredProducts.map(product => product.categoria))];
+            setCategories(uniqueCategories);
+        }
+    }, [products]);
+
+    
+    console.log(generoVerificado)
 
     return (
         <div className={styles.categoryPage}>
             <CollectionHeader text={`${capitalize(categoria)} ${capitalize(genero)}`} />
+
+            {loading && <p>Cargando productos...</p>}
+            {error && <p>Error al cargar los productos</p>}
+
+            {/* Cajas de Categorías */}
+            <div className={styles.categoryGrid}>
+                {categories.map(category => (
+                    <Link
+                        to={`/categoria/${generoVerificado}/${category.toLowerCase()}`}
+                        key={category}
+                        className={styles.categoryBox}
+                    >
+                        <span className={styles.categoryName}>{category}</span>
+                    </Link>
+                ))}
+            </div>
 
 
             <div className={styles.productGrid}>
